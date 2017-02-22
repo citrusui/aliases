@@ -1,14 +1,13 @@
 language: bash
-sudo: required
+sudo: required # Just in case testing `sudo` doesn't work for some reason.
 addons:
   apt:
     packages: shellcheck
 os:
  - linux
  - osx
+dist: trusty # Shellcheck does not exist in precise.
 script:
- - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then shellcheck init.sh; fi
- - ./init.sh -y
- - if [ "$(type -t update)" != "function" ]; then exit 1; fi
+ - ./tests.sh
 notifications:
   email: false
