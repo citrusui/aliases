@@ -6,5 +6,7 @@ alias ...="cd ../.." # descend two directories
 alias ....="cd ../../.." # descend three directories
 alias ~="cd ~" # go to home directory
 alias atom="atom -a" # always open Atom in an existing window, if it exists
+alias cch="cache" # shortcut for `cache` function
 alias sh="bash" # always use bash
 alias sudo="sudo " # fixes problems when running aliases under `sudo`
+alias upd="update" # shortcut for `update` function
